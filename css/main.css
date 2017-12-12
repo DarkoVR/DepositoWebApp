@@ -1,0 +1,508 @@
+#header {
+    clear: both;
+    width: 100%;
+    height: 64px;
+    position: fixed;
+    z-index: 1000;
+    margin-top: -14px;
+    margin-left: -8px;
+}
+
+/*-------------------------Style for JQueryUi Autocomplete--------------------------*/
+
+.ui-autocomplete {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    float: left;
+    display: none;
+    min-width: 160px;   
+    padding: 4px 0;
+    margin: 0 0 10px 25px;
+    list-style: none;
+    background-color: #ffffff;
+    border-color: #ccc;
+    border-color: rgba(0, 0, 0, 0.2);
+    border-style: solid;
+    border-width: 1px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+    *border-right-width: 2px;
+    *border-bottom-width: 2px;
+}
+.ui-menu-item > a.ui-corner-all {
+    display: block;
+    padding: 3px 15px;
+    clear: both;
+    font-weight: normal;
+    line-height: 18px;
+    color: #555555;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.ui-state-hover, .ui-state-active {
+    color: #ffffff;
+    text-decoration: none;
+    background-color: #0088cc;
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    background-image: none;
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*-------------------------------Style for sidenav-----------------------------------*/
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+    transition: margin-left .5s;
+}
+/*-----------------------------------------------------------------------------------*/
+/*-------------------------------Style for img-zoom----------------------------------*/
+#img-contenedor img {
+-webkit-transition:all .9s ease; /* Safari y Chrome */
+-moz-transition:all .9s ease; /* Firefox */
+-o-transition:all .9s ease; /* IE 9 */
+-ms-transition:all .9s ease; /* Opera */
+width:100%;
+}
+#img-contenedor:hover img {
+-webkit-transform:scale(1.1);
+-moz-transform:scale(1.1);
+-ms-transform:scale(1.1);
+-o-transform:scale(1.1);
+transform:scale(1.1);
+}
+#img-contenedor {/*Ancho y altura son modificables al requerimiento de cada uno*/
+overflow:hidden;
+}
+/*-----------------------------------------------------------------------------------*/
+/*-------------------------Style for dropdown for button Login-----------------------*/
+
+.dropdown-content {
+	float: left;
+    display: none;
+    position: fixed;
+    background-color: #000000;
+    min-width: 160px;
+}
+
+.dropdown-content a:hover {
+	background-color: #2E2727;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+/*----------------------------------------------------------------------------------*/
+/*---------------------------------Style for tooltiptext----------------------------*/
+#tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+#tooltip #tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+#tooltip #tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
+
+#tooltip:hover #tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+/*----------------------------------------------------------------------------------*/
+/*--------------------------------Style for searchbar-------------------------------*/
+/***********************
+ * Essential Structure *
+ ***********************/
+.flexsearch--wrapper {
+    height: auto;
+    width: 600px;
+    overflow: hidden;
+    background: transparent;
+    margin: 0;
+}
+    
+.flexsearch--form {
+    overflow: hidden;
+    position: relative;
+}
+    
+.flexsearch--input-wrapper {
+    overflow: hidden;
+}
+
+.flexsearch--input {
+  width: 100%;
+}
+
+/***********************
+ * Configurable Styles *
+ ***********************/
+.flexsearch {
+  padding: 0 0 -50px 0; /* Padding for other horizontal elements */
+}
+
+.flexsearch--input {
+  -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    height: 40px;
+  padding: 0 46px 0 10px;
+    border-color: #111;
+  border-radius: 35px; /* (height/2) + border-width */
+  border-style: solid;
+    border-width: 2px;
+  margin-top: 15px;
+  color: #333;
+  font-family: 'Helvetica', sans-serif;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+    
+.flexsearch--submit {
+  position: absolute;
+    right: 0;
+    top: 0;
+    display: block;
+    width: 60px;
+    height: 60px;
+  padding: 0;
+  border: none;
+    margin-top: 5px; /* margin-top + border-width */
+  margin-right: 5px; /* border-width */
+    background: transparent;
+  color: #111;
+  font-family: 'Helvetica', sans-serif;
+  font-size: 30px;
+  line-height: 60px;
+}
+
+.flexsearch--input:focus {
+  outline: none;
+  border-color: red;
+}
+
+.flexsearch--input:focus.flexsearch--submit {
+    color: #333; 
+}
+
+.flexsearch--submit:hover {
+  color: red;
+  cursor: pointer;
+}
+
+::-webkit-input-placeholder {
+    color: #888;  
+}
+
+input:-moz-placeholder {
+  color: #888
+}
+/*--------------------------------------------------------------------------------*/ 
+#btSearch {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: block;
+    width: 36px;
+    height: 36px;
+    padding: 8px 8px 8px 8px; 
+    border: none;
+    margin-top: 17px; /* margin-top + border-width */
+    margin-right: 10px; /* border-width */
+    background: transparent;
+}
+
+#lista_principal{
+	float: left;
+	width: 100.6%; /*border: 1px; border-radius: 5px;*/
+	background-color: #111; /*color de fondo del header #000000*/
+	list-style-type: none; 
+	margin: 0; overflow: hidden; 
+	padding: 10px 0px 4px 0px;
+	border-right: 1px white;
+}
+
+#menu_principal ul li{
+	float: left;
+
+}
+#menu_principal ul li a{
+	color: #FFFFFF; 
+	display: block; 
+	padding: 15px 45.95px; 
+	font-family: Helvetica;
+	font-weight: bold; 
+	font-size: 15px;
+	text-decoration: none;
+	text-transform: uppercase;
+	margin-top: 8px;
+}
+
+#lista_superior {
+	float: left;
+	width: 100.6%;
+	background-color: #111; /*Color de fondo del menu superior #2E2727*/ 
+	list-style-type: none; 
+	margin: 0; overflow: hidden; 
+	padding: 0px 0px 0px 15%;
+	opacity: 0.7;
+}
+#menu_superior ul li{
+	float: left;
+}
+#menu_superior ul li a{
+	color: #FFFFFF; 
+	display: block; 
+	padding: 20px 45.95px; 
+	font-family: Helvetica; 
+	text-decoration: none;
+}
+#menu_superior ul li a:hover{
+	border-bottom: 6px solid red;
+}
+
+#wrapper-prim{
+	width: 100%; 
+	background-color:  #ECECEC; 
+}
+
+#wrapper-sec{
+	width: 100%; 
+	background-color:  #ECECEC;
+	padding-top: 60px; 	
+}
+
+#footer {
+    clear: both;
+    width: 100%;
+    height: 64px;
+    z-index: 1000;
+    margin-left: -8px;
+}
+
+#lista_inferior {
+	float: left;
+	width: 100%;
+	background-color: #2E2727; 
+	list-style-type: none; 
+	margin: 0; overflow: hidden; 
+	padding: 4px 0px 0px 70%;
+}
+#footer #menu_inferior ul li{
+	float: left;
+}
+#footer #menu_inferior ul li a{
+	color: #FFFFFF; 
+	display: block; 
+	padding: 10px 10px; 
+	font-family: Helvetica; 
+	text-decoration: none;
+}
+#footer #menu_inferior ul li a:hover{
+	/*border-bottom: 6px solid red;*/
+	color: red;
+}
+#content{
+	background-color: #FFFFFF; 
+	width: 100%;
+	margin: auto;
+	padding: 60px 75px 0px 75px; /*arriba, derecha, abajo, izquierda*/
+
+}
+
+.tablas th,td{
+	padding: 8px; 
+	text-align: left; 
+	border-bottom: 1px solid #ddd
+}
+.tablas tr:hover{
+	background-color: #f5f5f5
+}
+
+button {
+ border: none;
+ background: #FCB6A6;
+ color: white;
+ padding: 10px;
+ font-size: 18px;
+ border-radius: 5px;
+ position: relative;
+ box-sizing: border-box;
+ transition: all 500ms ease;
+}
+
+button:hover{
+	background: red;
+	color: #FFFFFF;
+}
+
+header{
+	display: inline-block;
+}
+section{
+	background-color: #F8F8F8; 
+	width: 100%;  
+	text-align: center;
+	margin-top: -20px;
+}
+article{
+	/*background-color:  #ECECEC;*/ 
+	text-align: justify; 
+	font-family: Helvetica; 
+	font-weight: bold; 
+	font-size: 16px;
+} /*#D6F3FA*/
+
+footer{
+	padding: 0px 16px 16px 0px;
+	line-height: 64px; 
+	color: #FFFFFF; 
+	background-color:  #2E2727; 
+	text-align: center; 
+	display: inline-block; 
+	width: 100.6%; /*border: 1px; border-radius: 5px;*/
+}
+h2{
+	text-transform: uppercase; 
+	color: red; 
+	font-family: Helvetica; /*#6A6975*/
+	/*border-bottom: 1px solid red; 
+	background-color: lightgrey;*/ 
+	padding: 8px;
+	font-weight: bold;
+}
+h3{
+	text-transform: uppercase; 
+	color: #417852; 
+	font-family: Helvetica; 
+	border-left: 6px solid red;
+    /*background-color: lightgrey;*/
+    text-align: center;
+	padding: 8px;
+}
+h4{
+	text-transform: uppercase; 
+	color: #000000; 
+	font-family: Helvetica; 
+	padding: 8px;
+}
+p{
+	padding: 5px 8px;
+}
+.texto_resaltado{
+	text-decoration: underline;
+    font-weight: bold;
+}
+
+#tabs ul {
+	background-color:  #9CAEC4; 
+	list-style-type: none; 
+	margin: 0; overflow: hidden; 
+	padding: 0; 
+	margin-top: 0;
+}
+#tabs ul li{
+	float: left;
+}
+#tabs ul li a{
+	color: #FFFFFF; 
+	display: block; 
+	padding: 16.5px 16.5px; 
+	font-family: Helvetica; 
+	text-decoration: none;
+}
+#tabs ul li a:hover{
+	color: #000000; 
+	background-color: #338DFF;
+}
+/*---------------------------PARA LOS DESCUENTOS DE LOS PRODUCTOS------------------------------------*/
+.p_real{
+    text-decoration: line-through;
+    color: gray;
+}
+.descuento{
+    font-size: 20px;
+    color: red;
+}
+.p_descuento{
+    font-size: 23px;
+    font-weight: bold;
+}
+.p_mayoreo{
+    font-size: 14px;
+}
+.oferton{
+    background-image: url(../images/oferta.png);
+    background-repeat: no-repeat;
+    background-position: left top;
+}
+.oferton img{
+    border-top-left-radius: 50%; 
+}

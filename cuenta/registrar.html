@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<style>
+form{
+     font-family: Helvetica;
+}
+
+h2{
+     font-family: Helvetica;
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+select{
+    width: 100%;
+    padding: 10px 10px 10px 10px;
+}
+
+option{
+    font-size: 15px;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+    padding: 14px 20px;
+    background-color: #f44336;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn,.signupbtn {
+    float: left;
+    width: 50%;
+}
+
+/* Add padding to container elements */
+.container {
+    padding: 16px;
+}
+
+/* Clear floats */
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+    .cancelbtn, .signupbtn {
+       width: 100%;
+    }
+}
+</style>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/icon.png" type="image/x-icon">
+    <title>Depósito Vázquez</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <!--Script para jquerys-->
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <!--Scripts para JQueryUI-->
+  
+    <!---->
+</head>
+<body>
+
+<h2>Fromulario de registro</h2>
+
+<form action="registrar.php" method="POST" style="border:1px solid #ccc">
+  <div class="container">
+    <label><b>Tipo de usuario</b></label>
+    <div class="form-group">
+      <select class="form-control" id="sel1">
+        <option>cliente</option>
+        <option>empleado</option>
+      </select>
+
+    <label><b>Correo</b></label>
+    <input type="text" placeholder="Ingresa Correo" name="email" required>
+
+    <label><b>Nombre</b></label>
+    <input type="text" placeholder="Ingresa Nombre" name="nombre" required>
+
+    <label><b>Apellido Paterno</b></label>
+    <input type="text" placeholder="Ingresa apaterno" name="apaterno" required>
+
+    <label><b>Apellido Materno</b></label>
+    <input type="text" placeholder="Ingresa amaterno" name="amaterno" required>
+
+    <label><b>Contrase&ntilde;a</b></label>
+    <input type="password" placeholder="Ingresa Contrase&ntilde;a" name="psw" required>
+
+    <label><b>Repite Contrase&ntilde;a</b></label>
+    <input type="password" placeholder="Repite Contra&ntilde;a" name="psw_repeat" required>
+    <input type="checkbox" checked="checked"> Recordar
+    <p>Crear una cuenta significa que estas de acuerdo con nuestros <a href="#">Terminos y condiciones</a>.</p>
+
+    <div class="clearfix">
+      <a href="../index.php">
+        <button type="button" class="cancelbtn">Cancelar</button>
+      </a>
+      <button type="submit" class="signupbtn">Registrar</button>
+    </div>
+  </div>
+</form>
+
+</body>
+</html>
